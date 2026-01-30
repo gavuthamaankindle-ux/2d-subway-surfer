@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#game {
+  width: 300px;
+  height: 500px;
+  border: 2px solid black;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+#character {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  top: 400px;
+  left: 100px;
+}
+
+
+#block {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(4, 4, 4);
+  position: absolute;
+  animation: slide 0.8s linear infinite;
+}
+
+#image {
+  position: absolute;
+  margin-top: -400px;
+  top: -50px;
+  left: -20px;
+  width: 340px;
+  height: 1000px;
+  object-fit: fill;
+  z-index: 1;
+  animation: slide 0.8s linear infinite;
+}
+
+#character,
+#block,
+#coin {
+  z-index: 2;
+  position: absolute;
+}
+
+#coin {
+  width: 50px;
+  height: 50px;
+  background-color: gold;
+  position: relative;
+  z-index: 70;
+  animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: 410px;
+  }
+}
+
+#scoreboard {
+  text-align: center;
+  font-size: large;
+}
+
+.score {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  padding: 2rem;
+  color: white;
+  margin: 10px;
+  font-size: 50px;
+}
+
+body {
+  background-color: blue;
+}
+
+#char {
+  height: 100px;
+  width: 100px;
+}
+
+#train {
+  height: 100px;
+  width: 100px;
+}
